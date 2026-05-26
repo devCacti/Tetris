@@ -5,6 +5,12 @@ tetromino::tetromino() {
     pos = position(); // Start at the default position (0, 0)
 }
 
+tetromino::tetromino(tetromino_type shape, grid* game_grid) {
+    this->shape = shape;
+    this->game_grid = game_grid;
+    pos = position(); // Start at the default position (0, 0)
+}
+
 position tetromino::get_position() const {
     return this->pos;
 }

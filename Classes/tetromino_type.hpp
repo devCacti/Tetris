@@ -6,5 +6,6 @@ enum class tetromino_type {
     S, // Z-shaped (right)
     Z, // Z-shaped (left)
     L, // L-shaped (right)
-    J  // L-shaped (left)
+    J, // L-shaped (left)
+    NONE // No tetromino
 };

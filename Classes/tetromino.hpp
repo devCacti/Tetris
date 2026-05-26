@@ -1,10 +1,12 @@
 #include "tetromino_type.hpp"
 #include "position.hpp"
+#include "grid.hpp"
 #include <array>
 
 class tetromino {
 public:
     tetromino(); // Constructor
+    tetromino(tetromino_type shape, grid* game_grid); // Constructor with parameters
     ~tetromino(); // Destructor
 
     position get_position() const; // Returns the current position of the tetromino
@@ -21,6 +23,7 @@ public:
 private:
     std::array<position, 4> blocks; // The 4 blocks that make up the tetromino
 
+    grid* game_grid; // Pointer to the game grid for collision detection
 
     position pos; // Position of the tetromino
 
